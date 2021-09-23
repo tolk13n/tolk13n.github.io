@@ -18,15 +18,17 @@
 
         <img class="logotip" src="/img/dont.jpg">
     
-    <form action="https://google.com/search">
-        <input type="text" name="q" placeholder="tut pishi!">
+    <form action="https://google.com/search"> 
+        <input id="serch" type="text" name="q" placeholder="tut pishi!">
         <br>
         <input type="submit" value="Google Search">
-        <input type="submit" value="Мені пощастить!" name="btnI">
-
-        <input type="hidden" name="sourceid" value="navclient">
-        <input type="hidden" name="gfns" value="1">
-        
+        <input id="lucky_google" type="button" value="Мені пощастить!" name="btnI"> 
     </form>
 </body>
+<script>
+    document.getElementById('lucky_google').addEventListener('click', ()=>{
+        let find = document.getElementById("serch").value;
+        document.location.href = ("https://google.com/search"+"?q=" + find + "&btnI=&sourceid=navclient&gfns=1");
+    })
+</script>
 </html>
